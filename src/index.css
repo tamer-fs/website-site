@@ -1,13 +1,280 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assets/images/website-bg.png");
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: goldplay-light;
+  src: url("./assets/fonts/goldplay/Goldplay-Light.ttf");
+}
+
+@font-face {
+  font-family: goldplay-regular;
+  src: url("./assets/fonts/goldplay/Goldplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: goldplay-semibold;
+  src: url("./assets/fonts/goldplay/Goldplay-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: goldplay-Bold;
+  src: url("./assets/fonts/goldplay/Goldplay-Bold.ttf");
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #151515;
+  --color-blue: #79addc;
+  --smallest-text: 12px;
+  --detail-text: 14px;
+  --body-text: 24px;
+  --subtitle-text: 18px;
+  --main-text: 48px;
+  --display-text: 96px;
+  --start-text: 107px;
+}
+
+.large-title-text {
+  font-size: var(--start-text);
+}
+.header-1 {
+  font-size: var(--display-text);
+}
+.header-2 {
+  font-size: var(--main-text);
+}
+.standard-text {
+  font-size: var(--body-text);
+}
+
+.font-poppins-100 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+
+.font-poppins-200 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.font-poppins-300 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.font-poppins-400 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.font-poppins-500 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.font-poppins-600 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.font-poppins-700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.font-poppins-800 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+.font-goldplay-100 {
+  font-family: goldplay-light;
+}
+
+.font-goldplay-200 {
+  font-family: goldplay-regular;
+}
+
+.font-goldplay-300 {
+  font-family: goldplay-semibold;
+}
+
+.font-goldplay-400 {
+  font-family: goldplay-bold;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-black {
+  color: #000;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.fill-btn {
+  font-family: goldplay-regular;
+  padding: 10px 20px;
+  background-color: var(--color-blue);
+  border-radius: 4px;
+  border: 2px solid var(--color-blue);
+  color: white;
+  font-size: var(--detail-text);
+  cursor: pointer;
+  transform: translateY(0px);
+  transition: all 0.25s cubic-bezier(0.68, -0.26, 0.31, 1.27);
+}
+
+.fill-btn:hover {
+  transform: translateY(3px);
+}
+
+.secondary-btn {
+  font-family: goldplay-regular;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 2px solid var(--color-blue);
+  color: var(--color-blue);
+  font-size: var(--detail-text);
+  cursor: pointer;
+  transform: translateY(0px);
+  transition: all 0.25s cubic-bezier(0.68, -0.26, 0.31, 1.27);
+}
+
+.secondary-btn:hover {
+  transform: translateY(3px);
+}
+
+.icon-btn:hover {
+  opacity: 0.6;
+}
+
+.hover-underline-animation {
+  position: relative;
+}
+
+.hover-underline-animation:hover {
+  opacity: 0.6;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-blue);
+  transform-origin: bottom right;
+  transition: transform 0.25s cubic-bezier(0.68, -0.26, 0.31, 1.27);
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+.animate-delay-100 {
+  transition-delay: 100ms;
+}
+
+.animate-delay-200 {
+  transition-delay: 200ms;
+}
+
+.animate-delay-300 {
+  transition-delay: 300ms;
+}
+
+.animate-delay-400 {
+  transition-delay: 400ms;
+}
+
+.animate-delay-500 {
+  transition-delay: 500ms;
+}
+
+.animate-delay-600 {
+  transition-delay: 600ms;
+}
+
+.animate-delay-700 {
+  transition-delay: 700ms;
+}
+
+.animate-delay-800 {
+  transition-delay: 800ms;
+}
+
+.animate-delay-900 {
+  transition-delay: 900ms;
+}
+
+.animate-delay-1000 {
+  transition-delay: 100ms;
+}
+
+.bounce-transition {
+  transition-timing-function: cubic-bezier(0.68, -0.26, 0.31, 1.27);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --smallest-text: 12px;
+    --detail-text: 14px;
+    --body-text: 24px;
+    --subtitle-text: 18px;
+    --main-text: 32px;
+    --display-text: 96px;
+    --start-text: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --smallest-text: 12px;
+    --detail-text: 14px;
+    --body-text: 24px;
+    --subtitle-text: 18px;
+    --main-text: 25px;
+    --display-text: 96px;
+    --start-text: 50px;
+  }
 }

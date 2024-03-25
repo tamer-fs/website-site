@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NavBar/NavBar";
+import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+
+import Home from "./pages/Home";
+import { useEffect } from "react";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log(entry);
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  useEffect(() => {
+    window.onscroll = () => {
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((element) => observer.observe(element));
+    };
+  }, []);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
