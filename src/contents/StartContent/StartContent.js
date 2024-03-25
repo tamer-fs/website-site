@@ -14,7 +14,7 @@ function StartContent() {
         </div>
         <div className="subtext-container">
           <h2 className="font-goldplay-200 text-white header-2">
-            Laat uw kleine bedrijf een moderne boost krijgen met een hoge
+            Laat uw kleine bedrijf een moderne boost ontvangen met een hoge
             kwaliteit website die regel voor regel speciaal op maat is gemaakt
             voor uw benodigheden.
           </h2>

@@ -18,7 +18,7 @@ header {
   display: grid;
   grid-template-rows: auto auto auto;
   width: 80%;
-  margin-top: 170px;
+  margin-top: 70px;
   justify-content: center;
   row-gap: 50px;
 }
