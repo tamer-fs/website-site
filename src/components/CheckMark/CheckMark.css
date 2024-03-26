@@ -1,0 +1,11 @@
+.checkmark-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkmarks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

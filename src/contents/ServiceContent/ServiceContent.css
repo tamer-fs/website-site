@@ -1,0 +1,21 @@
+.know-more-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-top: 150px;
+}
+
+.v-sep {
+  height: 2px;
+  width: 50px;
+  background-color: var(--color-blue);
+  margin: 10px 0px 15px 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .know-more-section {
+    margin-top: 50px;
+  }
+}

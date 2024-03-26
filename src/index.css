@@ -1,11 +1,18 @@
-body {
+.bg {
+  z-index: -2;
+  position: fixed;
   background-image: url("./assets/images/website-bg.png");
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-position: 0px -180px;
+  height: 200vh;
+  width: 100vw;
 }
 
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -39,6 +46,7 @@ body {
   --main-text: 48px;
   --display-text: 96px;
   --start-text: 107px;
+  --header-margin: 50px;
 }
 
 .large-title-text {
@@ -52,6 +60,10 @@ body {
 }
 .standard-text {
   font-size: var(--body-text);
+}
+
+.header-margin {
+  margin-bottom: var(--header-margin);
 }
 
 .font-poppins-100 {
@@ -258,8 +270,8 @@ body {
 @media screen and (max-width: 1100px) {
   :root {
     --smallest-text: 12px;
-    --detail-text: 14px;
-    --body-text: 24px;
+    --detail-text: 13px;
+    --body-text: 20px;
     --subtitle-text: 18px;
     --main-text: 32px;
     --display-text: 76px;
@@ -270,8 +282,8 @@ body {
 @media screen and (max-width: 600px) {
   :root {
     --smallest-text: 12px;
-    --detail-text: 14px;
-    --body-text: 24px;
+    --detail-text: 12px;
+    --body-text: 16px;
     --subtitle-text: 18px;
     --main-text: 25px;
     --display-text: 50px;

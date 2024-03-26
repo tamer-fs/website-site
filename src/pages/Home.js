@@ -5,10 +5,13 @@ import ServiceContent from "../contents/ServiceContent/ServiceContent";
 
 function Home() {
   return (
-    <MainLayout>
-      <StartContent />
-      <ServiceContent />
-    </MainLayout>
+    <>
+      <div className="bg"></div>
+      <MainLayout>
+        <StartContent />
+        <ServiceContent />
+      </MainLayout>
+    </>
   );
 }
 

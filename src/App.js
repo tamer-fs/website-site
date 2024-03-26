@@ -17,8 +17,6 @@ function App() {
       if (entry.isIntersecting) {
         console.log(entry);
         entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
       }
     });
   });
