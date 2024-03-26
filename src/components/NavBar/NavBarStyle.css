@@ -77,6 +77,10 @@ nav {
   gap: 50px;
 }
 
+.button-container > .fill-btn {
+  margin-bottom: 70px;
+}
+
 @media screen and (max-width: 1050px) {
   .menu-section-ss > .menu-btn {
     display: flex;
