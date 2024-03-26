@@ -255,26 +255,26 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   :root {
     --smallest-text: 12px;
     --detail-text: 14px;
     --body-text: 24px;
     --subtitle-text: 18px;
     --main-text: 32px;
-    --display-text: 96px;
+    --display-text: 76px;
     --start-text: 60px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   :root {
     --smallest-text: 12px;
     --detail-text: 14px;
     --body-text: 24px;
     --subtitle-text: 18px;
     --main-text: 25px;
-    --display-text: 96px;
+    --display-text: 50px;
     --start-text: 50px;
   }
 }
