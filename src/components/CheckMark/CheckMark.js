@@ -3,7 +3,17 @@ import "./CheckMark.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faC, faCheck } from "@fortawesome/free-solid-svg-icons";
 
-function CheckMark({ children, color, checkSize, trans, transDelay }) {
+function CheckMark({
+  children,
+  color,
+  checkSize,
+  trans,
+  transDelay,
+  textColor,
+  icon = faCheck,
+  gap = 20,
+  verticalGap = 0,
+}) {
   let className = "";
   if (trans) {
     className = `checkmark-container hidden animate-delay-${transDelay}`;
@@ -12,9 +22,18 @@ function CheckMark({ children, color, checkSize, trans, transDelay }) {
   }
 
   return (
-    <div className={className}>
-      <FontAwesomeIcon icon={faCheck} color={color} fontSize={checkSize} />
-      <p className="standard-text font-goldplay-200">{children}</p>
+    <div className={className} style={{ gap: gap }}>
+      <FontAwesomeIcon icon={icon} color={color} fontSize={checkSize} />
+      <p
+        className="standard-text font-goldplay-200"
+        style={{
+          color: textColor,
+          marginTop: verticalGap,
+          marginBottom: verticalGap,
+        }}
+      >
+        {children}
+      </p>
     </div>
   );
 }

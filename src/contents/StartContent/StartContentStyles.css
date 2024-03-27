@@ -18,7 +18,7 @@ header {
   display: grid;
   grid-template-rows: auto auto auto;
   width: 80%;
-  margin-top: 70px;
+  margin-top: calc(5vh + 75px);
   justify-content: center;
   row-gap: 50px;
 }
@@ -40,16 +40,7 @@ h2 {
   font-size: var(--detail-text);
 }
 
-@media screen and (max-width: 1000px) {
-  .elements-container {
-    margin-top: 50px;
-  }
-}
-
 @media screen and (max-width: 550px) {
-  .elements-container {
-    margin-top: 100px;
-  }
   .buttons-container {
     justify-content: center;
     flex-direction: column;
