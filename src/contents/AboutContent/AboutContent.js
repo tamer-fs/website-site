@@ -3,14 +3,19 @@ import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-function AboutContent() {
+function AboutContent({
+  showTitle = true,
+  bgColor = "var(--color-black)",
+  titleColor = "var(--color-white)",
+}) {
   return (
     <>
       <TwoColLayout
         bgColor={"var(--color-black)"}
         title={"over mij"}
-        showTitle={true}
+        showTitle={showTitle}
         titleColor={"var(--color-white)"}
+        id="about-top"
       >
         <div className="left-content"></div>
         <div className="right-content">

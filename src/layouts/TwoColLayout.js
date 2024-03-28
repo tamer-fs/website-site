@@ -11,6 +11,7 @@ export default function TwoColLayout({
   number,
   showTitle,
   titleColor,
+  id,
 }) {
   const twoColLayoutStyles = {
     backgroundColor: bgColor,
@@ -19,7 +20,7 @@ export default function TwoColLayout({
   return (
     <>
       {showNavBar && <NavBar />}
-      <div className="content-container" style={twoColLayoutStyles}>
+      <div className="content-container" style={twoColLayoutStyles} id={id}>
         <div className="title-container">
           {showTitle && (
             <h1

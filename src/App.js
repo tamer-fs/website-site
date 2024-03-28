@@ -2,12 +2,22 @@ import NavBar from "./components/NavBar/NavBar";
 import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Service from "./pages/Service";
+import About from "./pages/About";
 import { useEffect } from "react";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/service",
+    element: <Service />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

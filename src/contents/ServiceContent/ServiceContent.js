@@ -3,13 +3,18 @@ import "./ServiceContent.css";
 import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
 
-function ServiceContent() {
+function ServiceContent({ children, showTitle = true }) {
   return (
     <>
-      <TwoColLayout bgColor={"transparent"} title={"Service"} showTitle={true}>
+      <TwoColLayout
+        bgColor={"transparent"}
+        title={"Service"}
+        showTitle={showTitle}
+        id={"service-top"}
+      >
         <div className="left-content">
           <h3 className="header-2 font-goldplay-400 text-black hidden header-margin">
-            Mijn Service
+            Mijn Dienst
           </h3>
           <p className="hidden animate-delay-200 standard-text font-goldplay-200">
             Ik maak moderne websites voor bedrijven die graag meer aandacht
@@ -56,6 +61,7 @@ function ServiceContent() {
           </div>
         </div>
       </TwoColLayout>
+      {children}
       <div className="know-more-section">
         <h3 className="header-2 font-goldplay-400 text-black hidden">
           Meer weten?

@@ -65,29 +65,29 @@ function NavBar() {
         </li>
         <li className="li-nav hover-underline-animation">
           <Link
-            to="service"
+            to="/service"
             style={{
               color: textColors[location.pathname][1][0],
               fontWeight: textColors[location.pathname][1][1],
             }}
           >
-            Service
+            Mijn Dienst
           </Link>
         </li>
         <li className="li-nav hover-underline-animation">
           <Link
-            to="about"
+            to="/about"
             style={{
               color: textColors[location.pathname][2][0],
               fontWeight: textColors[location.pathname][2][1],
             }}
           >
-            Over mij
+            Over Mij
           </Link>
         </li>
         <li className="li-nav hover-underline-animation">
           <Link
-            to="pricing"
+            to="/pricing"
             style={{
               color: textColors[location.pathname][3][0],
               fontWeight: textColors[location.pathname][3][1],
@@ -128,29 +128,29 @@ function NavBar() {
             </li>
             <li className="li-nav hover-underline-animation">
               <Link
-                to="service"
+                to="/service"
                 style={{
                   color: textColors[location.pathname][1][0],
                   fontWeight: textColors[location.pathname][1][1],
                 }}
               >
-                Service
+                Mijn Dienst
               </Link>
             </li>
             <li className="li-nav hover-underline-animation">
               <Link
-                to="about"
+                to="/about"
                 style={{
                   color: textColors[location.pathname][2][0],
                   fontWeight: textColors[location.pathname][2][1],
                 }}
               >
-                Over mij
+                Over Mij
               </Link>
             </li>
             <li className="li-nav hover-underline-animation">
               <Link
-                to="pricing"
+                to="/pricing"
                 style={{
                   color: textColors[location.pathname][3][0],
                   fontWeight: textColors[location.pathname][3][1],
