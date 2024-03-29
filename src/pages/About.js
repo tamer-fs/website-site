@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import TitleLayout from "../layouts/TitleLayout";
 import AboutContent from "../contents/AboutContent/AboutContent";
+import FooterContent from "../contents/FooterContent/FooterContent";
 
 function About() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function About() {
         buttonType={"fill-btn"}
       >
         <AboutContent showTitle={false}></AboutContent>
+        <FooterContent />
       </TitleLayout>
     </>
   );

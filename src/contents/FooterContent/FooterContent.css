@@ -1,0 +1,36 @@
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-text > h4 {
+  line-height: 130%;
+}
+
+.footer-text > p {
+  opacity: 0.75;
+}
+
+.footer-links-container {
+  background-color: #0f0f0f;
+  padding: 50px 100px 50px 100px;
+  display: flex;
+  gap: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .footer-links-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

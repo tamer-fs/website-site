@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ServiceContent from "../contents/ServiceContent/ServiceContent";
 import TitleLayout from "../layouts/TitleLayout";
+import FooterContent from "../contents/FooterContent/FooterContent";
 
 function Service() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function Service() {
         buttonScrollTo={"#service-top"}
       >
         <ServiceContent showTitle={false}></ServiceContent>
+        <FooterContent />
       </TitleLayout>
     </>
   );

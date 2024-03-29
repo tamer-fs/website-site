@@ -1,0 +1,13 @@
+.footerItem-links {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
