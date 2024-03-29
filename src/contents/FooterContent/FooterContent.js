@@ -3,6 +3,7 @@ import "./FooterContent.css";
 import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
 import FooterItem from "../../components/FooterItem/FooterItem";
+import dotImg from "../../assets/images/dot-drawing.png";
 
 /*
 children,
@@ -36,7 +37,9 @@ function FooterContent() {
             Offerte aanvragen
           </button>
         </div>
-        <div className="right-container"></div>
+        <div className="right-container footer-img-container">
+          <img className="footer-img" src={dotImg} />
+        </div>
       </TwoColLayout>
       <div className="footer-links-container">
         <FooterItem

@@ -21,6 +21,17 @@
   gap: 50px;
 }
 
+.footer-img {
+  width: 100%;
+}
+
+.footer-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 800px) {
   .footer-links-container {
     justify-content: center;
