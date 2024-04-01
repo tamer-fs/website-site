@@ -33,7 +33,10 @@ export default function TwoColLayout({
         </div>
         <div className="num-container">
           {showNumber && (
-            <h1 style={{ opacity: 0.5 }} className="header-1 font-poppins-700">
+            <h1
+              style={{ opacity: 0.5, color: titleColor }}
+              className="header-1 font-poppins-700"
+            >
               {number}
             </h1>
           )}

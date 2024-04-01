@@ -3,7 +3,12 @@ import "./ServiceContent.css";
 import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
 
-function ServiceContent({ children, showTitle = true }) {
+function ServiceContent({ children, showTitle = true, showMore = true }) {
+  const handleScrollButton = (e) => {
+    e.preventDefault();
+    window.location.replace("/service");
+  };
+
   return (
     <>
       <TwoColLayout
@@ -62,15 +67,22 @@ function ServiceContent({ children, showTitle = true }) {
         </div>
       </TwoColLayout>
       {children}
-      <div className="know-more-section">
-        <h3 className="header-2 font-goldplay-400 text-black hidden">
-          Meer weten?
-        </h3>
-        <div className="v-sep hidden animate-delay-200"></div>
-        <button className="fill-btn hidden animate-delay-400">
-          Lees hier over de werkwijze
-        </button>
-      </div>
+      {showMore && (
+        <div className="know-more-section">
+          <h3 className="header-2 font-goldplay-400 text-black hidden">
+            Meer weten?
+          </h3>
+          <div className="v-sep hidden animate-delay-200"></div>
+          <button
+            className="fill-btn hidden animate-delay-400"
+            onClick={(e) => {
+              handleScrollButton(e);
+            }}
+          >
+            Lees hier over de werkwijze
+          </button>
+        </div>
+      )}
     </>
   );
 }

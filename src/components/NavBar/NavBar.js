@@ -9,7 +9,8 @@ function NavBar() {
   const [menuPos, setMenuPos] = useState("-150vh");
 
   const location = useLocation();
-  console.log(location.pathname);
+  const pathname = "/" + location.pathname.split("/")[1];
+  console.log(pathname);
 
   const textColors = {
     "/": [
@@ -56,8 +57,8 @@ function NavBar() {
           <Link
             to="/"
             style={{
-              color: textColors[location.pathname][0][0],
-              fontWeight: textColors[location.pathname][0][1],
+              color: textColors[pathname][0][0],
+              fontWeight: textColors[pathname][0][1],
             }}
           >
             Home
@@ -67,8 +68,8 @@ function NavBar() {
           <Link
             to="/service"
             style={{
-              color: textColors[location.pathname][1][0],
-              fontWeight: textColors[location.pathname][1][1],
+              color: textColors[pathname][1][0],
+              fontWeight: textColors[pathname][1][1],
             }}
           >
             Mijn Dienst
@@ -78,8 +79,8 @@ function NavBar() {
           <Link
             to="/about"
             style={{
-              color: textColors[location.pathname][2][0],
-              fontWeight: textColors[location.pathname][2][1],
+              color: textColors[pathname][2][0],
+              fontWeight: textColors[pathname][2][1],
             }}
           >
             Over Mij
@@ -89,8 +90,8 @@ function NavBar() {
           <Link
             to="/pricing"
             style={{
-              color: textColors[location.pathname][3][0],
-              fontWeight: textColors[location.pathname][3][1],
+              color: textColors[pathname][3][0],
+              fontWeight: textColors[pathname][3][1],
             }}
           >
             Tarieven
@@ -119,8 +120,8 @@ function NavBar() {
               <Link
                 to="/"
                 style={{
-                  color: textColors[location.pathname][0][0],
-                  fontWeight: textColors[location.pathname][0][1],
+                  color: textColors[pathname][0][0],
+                  fontWeight: textColors[pathname][0][1],
                 }}
               >
                 Home
@@ -130,8 +131,8 @@ function NavBar() {
               <Link
                 to="/service"
                 style={{
-                  color: textColors[location.pathname][1][0],
-                  fontWeight: textColors[location.pathname][1][1],
+                  color: textColors[pathname][1][0],
+                  fontWeight: textColors[pathname][1][1],
                 }}
               >
                 Mijn Dienst
@@ -141,8 +142,8 @@ function NavBar() {
               <Link
                 to="/about"
                 style={{
-                  color: textColors[location.pathname][2][0],
-                  fontWeight: textColors[location.pathname][2][1],
+                  color: textColors[pathname][2][0],
+                  fontWeight: textColors[pathname][2][1],
                 }}
               >
                 Over Mij
@@ -152,8 +153,8 @@ function NavBar() {
               <Link
                 to="/pricing"
                 style={{
-                  color: textColors[location.pathname][3][0],
-                  fontWeight: textColors[location.pathname][3][1],
+                  color: textColors[pathname][3][0],
+                  fontWeight: textColors[pathname][3][1],
                 }}
               >
                 Tarieven

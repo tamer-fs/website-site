@@ -31,7 +31,7 @@ function FooterContent() {
             Laten we uw project bespreken
           </h4>
           <p className="standard-text text-white font-goldplay-300 hidden animate-delay-100">
-            Neem contact met mij op. Ik help ue graag verder.
+            Neem contact met mij op. Ik help u graag verder.
           </p>
           <button className="fill-btn hidden animate-delay-200">
             Offerte aanvragen

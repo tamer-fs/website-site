@@ -15,6 +15,20 @@
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-black); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border: 3px solid var(--color-black);
+  border-radius: 20px;
+}
+
 @font-face {
   font-family: goldplay-light;
   src: url("./assets/fonts/goldplay/Goldplay-Light.ttf");
@@ -47,6 +61,7 @@
   --display-text: 96px;
   --start-text: 107px;
   --header-margin: 50px;
+  --window-padding: 100px;
 }
 
 .large-title-text {
@@ -279,6 +294,12 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  :root {
+    --window-padding: 70px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   :root {
     --smallest-text: 12px;
@@ -288,5 +309,6 @@
     --main-text: 25px;
     --display-text: 50px;
     --start-text: 50px;
+    --window-padding: 45px;
   }
 }

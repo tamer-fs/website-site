@@ -4,9 +4,6 @@ import AboutContent from "../contents/AboutContent/AboutContent";
 import FooterContent from "../contents/FooterContent/FooterContent";
 
 function About() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
 
   return (
     <>

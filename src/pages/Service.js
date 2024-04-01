@@ -2,12 +2,9 @@ import React, { useEffect } from "react";
 import ServiceContent from "../contents/ServiceContent/ServiceContent";
 import TitleLayout from "../layouts/TitleLayout";
 import FooterContent from "../contents/FooterContent/FooterContent";
+import MethodeContent from "../contents/MethodeContent/MethodeContent";
 
 function Service() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
   return (
     <>
       <div className="bg"></div>
@@ -21,7 +18,9 @@ function Service() {
         buttonText={"Lees verder"}
         buttonScrollTo={"#service-top"}
       >
-        <ServiceContent showTitle={false}></ServiceContent>
+        <ServiceContent showTitle={false} showMore={false}>
+          <MethodeContent />
+        </ServiceContent>
         <FooterContent />
       </TitleLayout>
     </>

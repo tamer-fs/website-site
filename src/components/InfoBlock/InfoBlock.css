@@ -1,0 +1,45 @@
+.info-block-container {
+  border-radius: 4px;
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.info-block-title-container {
+  border-bottom: 2px solid var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 7px;
+}
+.info-block-content-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.info-block-content-container > button {
+  border-radius: 50px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-block-content-container::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+.info-block-content-container::-webkit-scrollbar-track {
+  background: var(--color-black); /* color of the tracking area */
+}
+
+.info-block-content-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border: 3px solid var(--color-black);
+  border-radius: 20px;
+}

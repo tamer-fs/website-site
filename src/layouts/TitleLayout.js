@@ -13,6 +13,10 @@ function TitleLayout({
   buttonText,
   buttonScrollTo,
   buttonType = "secondary-btn",
+  showNav = true,
+  id = "",
+  extraContent,
+  showBtn,
 }) {
   const handleScrollButton = (e) => {
     e.preventDefault();
@@ -21,8 +25,9 @@ function TitleLayout({
 
   return (
     <>
-      <NavBar />
+      {showNav && <NavBar />}
       <div
+        id={id}
         className="main-title-container"
         style={{ backgroundColor: bgColor }}
       >
@@ -33,15 +38,21 @@ function TitleLayout({
           >
             {titleName}
           </h1>
+          {extraContent}
           <h2
             className="font-goldplay-200 header-2"
             style={{ color: quoteColor }}
           >
             {quote}
           </h2>
-          <button className={buttonType} onClick={(e) => handleScrollButton(e)}>
-            {buttonText}
-          </button>
+          {showBtn && (
+            <button
+              className={buttonType}
+              onClick={(e) => handleScrollButton(e)}
+            >
+              {buttonText}
+            </button>
+          )}
         </div>
       </div>
       {children}
