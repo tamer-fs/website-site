@@ -51,3 +51,40 @@
   border: 3px solid var(--color-black);
   border-radius: 20px;
 }
+
+#visible1,
+#visible2,
+#invisible {
+  fill: var(--color-blue);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#invisible {
+  transform: translateX(-100%);
+}
+
+button:hover #invisible {
+  transform: translateX(0);
+}
+
+button:hover #visible1 {
+  transform: translateX(25%);
+}
+
+button:hover #visible2 {
+  transform: translateX(100%);
+}
+
+.info-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.info-btn > p {
+  color: var(--color-blue);
+}
