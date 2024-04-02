@@ -50,7 +50,9 @@ function NavBar() {
   return (
     <nav>
       <div className="logo-section">
-        <h1 className="text-white font-poppins-600">Tamer Sparreboom</h1>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <h1 className="text-white font-poppins-600">Tamer Sparreboom</h1>
+        </Link>
       </div>
       <ul className="menu-section-ls">
         <li className="li-nav hover-underline-animation">

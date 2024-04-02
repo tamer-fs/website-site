@@ -5,10 +5,12 @@ import TwoColLayout from "../layouts/TwoColLayout";
 import FooterContent from "../contents/FooterContent/FooterContent";
 import CheckMark from "../components/CheckMark/CheckMark";
 import MethodSteps from "../components/MethodSteps/MethodSteps";
+import ScrollToTop from "../components/scrollToTop";
 
 function Development() {
   return (
     <>
+      <ScrollToTop />
       <div className="bg"></div>
       <TitleLayout
         titleColor={"var(--color-black)"}

@@ -300,7 +300,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   :root {
     --smallest-text: 12px;
     --detail-text: 12px;
@@ -308,6 +308,19 @@ body::-webkit-scrollbar-thumb {
     --subtitle-text: 18px;
     --main-text: 25px;
     --display-text: 50px;
+    --start-text: 50px;
+    --window-padding: 45px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    --smallest-text: 12px;
+    --detail-text: 12px;
+    --body-text: 16px;
+    --subtitle-text: 18px;
+    --main-text: 25px;
+    --display-text: 30px;
     --start-text: 50px;
     --window-padding: 45px;
   }

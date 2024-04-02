@@ -3,10 +3,12 @@ import ServiceContent from "../contents/ServiceContent/ServiceContent";
 import TitleLayout from "../layouts/TitleLayout";
 import FooterContent from "../contents/FooterContent/FooterContent";
 import MethodeContent from "../contents/MethodeContent/MethodeContent";
+import ScrollToTop from "../components/scrollToTop";
 
 function Service() {
   return (
     <>
+      <ScrollToTop />
       <div className="bg"></div>
       <TitleLayout
         titleColor={"var(--color-white)"}
