@@ -17,20 +17,26 @@ function TitleLayout({
   id = "",
   extraContent,
   showBtn,
+  bg = "",
 }) {
   const handleScrollButton = (e) => {
     e.preventDefault();
     window.location.replace(buttonScrollTo);
   };
 
+  let style;
+  if (bg != "") {
+    style = { background: bg };
+  } else {
+    style = { backgroundColor: bgColor };
+  }
+
+  console.log(style);
+
   return (
     <>
       {showNav && <NavBar />}
-      <div
-        id={id}
-        className="main-title-container"
-        style={{ backgroundColor: bgColor }}
-      >
+      <div id={id} className="main-title-container" style={style}>
         <div className="title-content-container">
           <h1
             className="font-goldplay-400 large-title-text"

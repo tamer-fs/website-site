@@ -7,6 +7,11 @@
   padding: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.method-steps-container > * {
+  text-decoration: none;
 }
 
 .method-steps-p {
@@ -24,7 +29,7 @@
 }
 
 .method-steps-p > .link:hover {
-  color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .method-steps-element {

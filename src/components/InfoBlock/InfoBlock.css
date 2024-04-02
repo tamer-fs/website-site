@@ -1,10 +1,17 @@
 .info-block-container {
-  border-radius: 4px;
+  border-radius: 8px;
   display: grid;
   grid-template-rows: min-content auto;
   grid-template-columns: 1fr;
   padding: 20px;
   padding-bottom: 0px;
+}
+
+.info-block-container:hover {
+  transition: box-shadow 0.3s ease;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .info-block-title-container {

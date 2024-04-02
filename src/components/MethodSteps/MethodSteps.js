@@ -21,41 +21,35 @@ function MethodSteps({ color1, color2, color3, current = "planning" }) {
           Mijn Dienst
         </Link>
         <FontAwesomeIcon icon={faAngleRight} fontSize={"var(--body-text)"} />
-        <span style={{ color: "var(--color-blue)" }}>{current}</span>
+        <span style={{ color: "var(--color-white)" }}>{current}</span>
       </p>
       <div className="method-steps-container">
-        <div
+        <Link
           className="method-steps-element"
           style={{ backgroundColor: color1 }}
-          onClick={(e) => {
-            handleScrollButton(e, "/service/planning");
-          }}
+          to={"/service/planning"}
         >
           <div className="number header-2 text-white font-poppins-200">1</div>
           <h4 className="header-2 text-white font-goldplay-300">Planning</h4>
-        </div>
-        <div
+        </Link>
+        <Link
           className="method-steps-element"
           style={{ backgroundColor: color2 }}
-          onClick={(e) => {
-            handleScrollButton(e, "/service/design");
-          }}
+          to={"/service/design"}
         >
           <div className="number header-2 text-white font-poppins-200">2</div>
           <h4 className="header-2 text-white font-goldplay-300">Design</h4>
-        </div>
-        <div
+        </Link>
+        <Link
           className="method-steps-element"
           style={{ backgroundColor: color3 }}
-          onClick={(e) => {
-            handleScrollButton(e, "/service/development");
-          }}
+          to={"/service/development"}
         >
           <div className="number header-2 text-white font-poppins-200">3</div>
           <h4 className="header-2 text-white font-goldplay-300">
             Ontwikkeling
           </h4>
-        </div>
+        </Link>
       </div>
     </>
   );

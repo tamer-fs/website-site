@@ -13,7 +13,8 @@ function Planning() {
       <TitleLayout
         titleColor={"var(--color-black)"}
         quoteColor={"var(--color-black)"}
-        bgColor={"transparent"}
+        bgColor={""}
+        bg={"linear-gradient(var(--color-blue), #9198e5)"}
         extraContent={<MethodSteps color1={"var(--color-black)"} />}
         quote={
           "Denken, dan doen en vervolgens verbeteren. Jouw ideeën vertaald naar een online concept."

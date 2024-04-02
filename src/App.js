@@ -1,5 +1,10 @@
 import NavBar from "./components/NavBar/NavBar";
-import { createHashRouter, Router, RouterProvider } from "react-router-dom";
+import {
+  createHashRouter,
+  Router,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import Service from "./pages/Service";
@@ -53,7 +58,7 @@ function App() {
     };
   }, []);
 
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;

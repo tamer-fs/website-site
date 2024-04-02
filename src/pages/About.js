@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import TitleLayout from "../layouts/TitleLayout";
 import AboutContent from "../contents/AboutContent/AboutContent";
 import FooterContent from "../contents/FooterContent/FooterContent";
+import ScrollToTop from "../components/scrollToTop";
 
 function About() {
-
   return (
     <>
+      <ScrollToTop />
       <div className="bg"></div>
       <TitleLayout
         titleColor={"var(--color-black)"}

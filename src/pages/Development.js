@@ -23,6 +23,7 @@ function Development() {
         buttonText={"Lees verder"}
         buttonScrollTo={"#development-top"}
         showBtn={false}
+        bg={"linear-gradient(var(--color-blue), #a791e5)"}
       >
         <TwoColLayout
           showNavBar={false}
