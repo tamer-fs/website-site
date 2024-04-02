@@ -2,6 +2,7 @@ import React from "react";
 import "./InfoBlock.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function InfoBlock({
   children,
@@ -17,11 +18,6 @@ function InfoBlock({
   to = "",
   cursor = "",
 }) {
-  const handleScrollButton = (e) => {
-    e.preventDefault();
-    window.location.replace(to);
-  };
-
   let animateClass = "";
   if (animate) {
     animateClass = `hidden animate-delay-${animateDelay}`;
@@ -30,9 +26,6 @@ function InfoBlock({
   return (
     <section
       className={`info-block-container ${animateClass}`}
-      onClick={(e) => {
-        handleScrollButton(e);
-      }}
       style={{
         backgroundColor: bgColor,
         width: width,
@@ -68,9 +61,11 @@ function InfoBlock({
         >
           {children}
         </span>
-        <button className="secondary-btn">
-          <FontAwesomeIcon icon={faAngleRight} />
-        </button>
+        <Link to={to}>
+          <button className="secondary-btn">
+            <FontAwesomeIcon icon={faAngleRight} />
+          </button>
+        </Link>
       </div>
     </section>
   );

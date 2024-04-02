@@ -46,15 +46,15 @@ function FooterContent() {
           title={"website"}
           links={[
             {
-              to: "/service",
+              to: "/service/planning",
               text: "Planning",
             },
             {
-              to: "/service",
+              to: "/service/design",
               text: "Design",
             },
             {
-              to: "/service",
+              to: "/service/development",
               text: "Ontwikkeling",
             },
           ]}

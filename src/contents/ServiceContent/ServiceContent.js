@@ -2,6 +2,7 @@ import React from "react";
 import "./ServiceContent.css";
 import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
+import { Link } from "react-router-dom";
 
 function ServiceContent({ children, showTitle = true, showMore = true }) {
   const handleScrollButton = (e) => {
@@ -69,18 +70,11 @@ function ServiceContent({ children, showTitle = true, showMore = true }) {
       {children}
       {showMore && (
         <div className="know-more-section">
-          <h3 className="header-2 font-goldplay-400 text-black hidden">
-            Meer weten?
-          </h3>
-          <div className="v-sep hidden animate-delay-200"></div>
-          <button
-            className="fill-btn hidden animate-delay-400"
-            onClick={(e) => {
-              handleScrollButton(e);
-            }}
-          >
-            Lees hier over de werkwijze
-          </button>
+          <h3 className="header-2 font-goldplay-400 text-black">Meer weten?</h3>
+          <div className="v-sep"></div>
+          <Link to={"/service"}>
+            <button className="fill-btn">Lees hier over de werkwijze</button>
+          </Link>
         </div>
       )}
     </>
