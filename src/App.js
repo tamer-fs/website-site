@@ -1,5 +1,5 @@
 import NavBar from "./components/NavBar/NavBar";
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+import { createHashRouter, Router, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Service from "./pages/Service";
@@ -9,7 +9,7 @@ import Design from "./pages/Design";
 import Development from "./pages/Development";
 import { useEffect } from "react";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
