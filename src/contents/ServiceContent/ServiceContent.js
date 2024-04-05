@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ServiceContent.css";
 import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
 import { Link } from "react-router-dom";
+import { ref, onValue } from "firebase/database";
+import db from "../../firebaseConfig";
 
 function ServiceContent({ children, showTitle = true, showMore = true }) {
-  const handleScrollButton = (e) => {
-    e.preventDefault();
-    window.location.replace("/service");
-  };
+  useEffect(() => {
+    const inputsRef = ref(db, "TamerWebsite/Inputs");
+    onValue(inputsRef, (snapshot) => {
+      snapshot.val().forEach((input) => {
+        const textElement = document.getElementById(input.for);
+        if (textElement != null) {
+          textElement.innerText = input.content;
+        }
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -19,10 +28,16 @@ function ServiceContent({ children, showTitle = true, showMore = true }) {
         id={"service-top"}
       >
         <div className="left-content">
-          <h3 className="header-2 font-goldplay-400 text-black hidden header-margin">
+          <h3
+            id="Linker service titel"
+            className="header-2 font-goldplay-400 text-black hidden header-margin"
+          >
             Mijn Dienst
           </h3>
-          <p className="hidden animate-delay-200 standard-text font-goldplay-200">
+          <p
+            id="Linker service paragraaf"
+            className="hidden animate-delay-200 standard-text font-goldplay-200"
+          >
             Ik maak moderne websites voor bedrijven die graag meer aandacht
             online willen. <br />
             <br />

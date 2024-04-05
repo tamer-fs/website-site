@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./StartContentStyles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import db from "../../firebaseConfig";
+import { ref, onValue } from "firebase/database";
 
 function StartContent() {
   return (
@@ -13,11 +15,7 @@ function StartContent() {
           </h1>
         </div>
         <div className="subtext-container">
-          <h2 className="font-goldplay-200 text-white header-2">
-            Laat uw kleine bedrijf een moderne boost ontvangen met een hoge
-            kwaliteit website die regel voor regel speciaal op maat is gemaakt
-            voor uw benodigheden.
-          </h2>
+          <h2 className="font-goldplay-200 text-white header-2">Hoi</h2>
         </div>
         <div className="buttons-container">
           <button className="secondary-btn">
