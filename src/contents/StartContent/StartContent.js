@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import db from "../../firebaseConfig";
 import { ref, onValue } from "firebase/database";
+import { Link } from "react-router-dom";
 
 function StartContent() {
   useEffect(() => {
@@ -40,7 +41,9 @@ function StartContent() {
             <FontAwesomeIcon icon={faAngleRight} style={{ paddingLeft: 10 }} />
           </button>
           <p>of</p>
-          <button className="fill-btn">Offerte aanvragen</button>
+          <Link to={"service/quote"}>
+            <button className="fill-btn start-btn">Offerte aanvragen</button>
+          </Link>
         </div>
       </div>
     </header>

@@ -13,6 +13,7 @@ import Planning from "./pages/Planning";
 import Design from "./pages/Design";
 import Development from "./pages/Development";
 import { useEffect } from "react";
+import Quote from "./pages/Quote";
 
 const router = createHashRouter([
   {
@@ -38,6 +39,10 @@ const router = createHashRouter([
   {
     path: "/service/development",
     element: <Development />,
+  },
+  {
+    path: "service/quote",
+    element: <Quote />,
   },
 ]);
 

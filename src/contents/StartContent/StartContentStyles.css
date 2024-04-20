@@ -47,7 +47,9 @@ h2 {
     gap: 10px;
     margin-top: 50px;
   }
-  .buttons-container > button {
-    width: 100%;
+  .buttons-container > button,
+  .start-btn,
+  Link {
+    width: calc(100vw - 50px);
   }
 }

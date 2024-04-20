@@ -4,6 +4,7 @@ import TwoColLayout from "../../layouts/TwoColLayout";
 import CheckMark from "../../components/CheckMark/CheckMark";
 import FooterItem from "../../components/FooterItem/FooterItem";
 import dotImg from "../../assets/images/dot-drawing.png";
+import QuoteContent from "../QuoteContent/QuoteContent";
 
 /*
 children,
@@ -17,9 +18,11 @@ children,
   id,
 */
 
-function FooterContent() {
+function FooterContent({ showQuote = true }) {
   return (
     <footer>
+      {showQuote && <QuoteContent />}
+
       <TwoColLayout
         showTitle={false}
         showNumber={false}

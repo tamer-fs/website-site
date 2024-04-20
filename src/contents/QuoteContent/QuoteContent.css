@@ -1,0 +1,106 @@
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+.options-title {
+}
+.options-container-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.options-container-item {
+  border: 2px solid var(--color-white);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+.options-container-item-title {
+}
+.options-container-item-body {
+  color: var(--color-white);
+}
+
+.selected {
+  background-color: var(--color-white);
+}
+
+.selected > * {
+  color: var(--color-black);
+}
+
+.form-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "firstN lastN"
+    "buissN buissN"
+    "emailN emailN"
+    "phoneN phoneN"
+    "descr descr"
+    "SendB SendB";
+  height: 100%;
+}
+
+.input-container {
+  padding: 20px;
+}
+
+.input-container > input,
+textarea,
+.send-btn {
+  height: 100%;
+  width: 100%;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  border-radius: 4px;
+  border: none;
+  padding: 15px;
+  font-size: var(--subtitle-text);
+}
+
+.send-btn {
+  font-family: goldplay-semibold;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  opacity: 0.8;
+}
+
+.input-container > input,
+textarea {
+  background-color: #373737;
+  color: white;
+  font-family: goldplay-regular;
+  color: white;
+  outline: none;
+  resize: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .input-container > input,
+  textarea,
+  .send-btn {
+    font-size: var(--detail-text);
+  }
+  .input-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .input-container > input,
+  .send-btn {
+    padding: 20px 10px 20px 10px;
+  }
+}
