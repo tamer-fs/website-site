@@ -222,14 +222,15 @@ body::-webkit-scrollbar-thumb {
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s ease;
+  translate: -100% 0%;
+  transition: translate 1s ease, filter 1s ease, opacity 1s ease;
+  -webkit-transition: translate 1s ease, filter 1s ease, opacity 1s ease;
 }
 
 .show {
   opacity: 1;
   filter: blur(0px);
-  transform: translateX(0);
+  translate: 0% 0%;
 }
 
 .animate-delay-100 {
